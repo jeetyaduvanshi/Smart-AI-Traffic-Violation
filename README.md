@@ -1,13 +1,82 @@
  
- # Smart Traffic Violation App
- 
- This is a code bundle for Smart Traffic Violation App. The original project is available at https://www.figma.com/design/8ay2inCgSsyxhX3kHkfoxf/Smart-Traffic-Violation-App.
- 
- ## Running the code
- 
- Run `npm i` to install the dependencies.
- 
- Run `npm run dev` to start the development server.
+# Smart Traffic Violation App
+
+A comprehensive traffic violation detection system using YOLOv8 for object detection, built with React frontend and Flask backend. The system can analyze images and videos to detect traffic violations and store results in Supabase.
+
+## Features
+
+- 🚗 **Traffic Violation Detection**: Uses YOLOv8 model to detect vehicles and traffic violations
+- 📸 **Image & Video Support**: Upload and analyze both images and videos
+- 🎯 **Real-time Analysis**: Get instant results with annotated bounding boxes
+- 📊 **History Tracking**: View past violation detections
+- 🔐 **User Authentication**: Secure login/signup with Supabase Auth
+- 📱 **Responsive Design**: Modern UI built with React and Tailwind CSS
+
+## Tech Stack
+
+### Frontend
+- React 18 with TypeScript
+- Vite for build tooling
+- Tailwind CSS for styling
+- Radix UI components
+- Supabase for authentication
+
+### Backend
+- Flask (Python)
+- YOLOv8 for object detection
+- OpenCV for image/video processing
+- Supabase for data storage
+
+## Quick Start
+
+### Prerequisites
+- Node.js 18+ and npm
+- Python 3.8+
+- Supabase account
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd smart-traffic-violation-app
+   ```
+
+2. **Install frontend dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Install backend dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set up environment variables**
+   
+   Create a `.env` file in the `backend/` directory:
+   ```env
+   SUPABASE_URL=https://YOUR_PROJECT_ID.supabase.co
+   SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
+   SUPABASE_BUCKET=violations
+   YOLO_WEIGHTS=yolov8n.pt
+   PORT=5001
+   ```
+
+### Running the Application
+
+1. **Start the backend server**
+   ```bash
+   cd backend
+   python app.py
+   ```
+   Backend will run on `http://localhost:5001`
+
+2. **Start the frontend development server**
+   ```bash
+   npm run dev
+   ```
+   Frontend will run on `http://localhost:3000`
  
  ## Backend (Flask + YOLOv8)
  
