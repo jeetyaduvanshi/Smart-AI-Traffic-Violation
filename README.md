@@ -1,4 +1,3 @@
- 
 # Smart Traffic Violation App
 
 A comprehensive traffic violation detection system using YOLOv8 for object detection, built with React frontend and Flask backend. The system can analyze images and videos to detect traffic violations and store results in Supabase.
@@ -130,4 +129,3 @@ A comprehensive traffic violation detection system using YOLOv8 for object detec
  - If image: shows annotated image (base64).
  - If video: shows a video player using `file_url`.
  - History persists to localStorage and/or server depending on availability.
- 
